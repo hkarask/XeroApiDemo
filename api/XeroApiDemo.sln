@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroApiDemo.Domain", "src\X
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroApiDemo.Application", "src\XeroApiDemo.Application\XeroApiDemo.Application.csproj", "{C260FDDD-5BA2-46F7-A92F-83DCA0651238}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroApiDemo.Application.Tests", "tests\XeroApiDemo.Application.Tests\XeroApiDemo.Application.Tests.csproj", "{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +30,15 @@ Global
 		{C260FDDD-5BA2-46F7-A92F-83DCA0651238}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C260FDDD-5BA2-46F7-A92F-83DCA0651238}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C260FDDD-5BA2-46F7-A92F-83DCA0651238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{24F119EE-1E37-4902-B62C-DAE78852B2BE} = {67F01E7F-950C-4D92-B307-4AE7CC0B6610}
 		{C5F91B8D-A70E-4312-9EFB-906165DEDC49} = {67F01E7F-950C-4D92-B307-4AE7CC0B6610}
 		{C260FDDD-5BA2-46F7-A92F-83DCA0651238} = {67F01E7F-950C-4D92-B307-4AE7CC0B6610}
+		{A8E81DE5-9B3A-40FC-9D25-9F7C8DE3CE2B} = {81604446-160D-450B-825A-74B02B3D3D1B}
 	EndGlobalSection
 EndGlobal
