@@ -39,8 +39,8 @@ const Dashboard = () => {
       <Box bg="bg-light" borderRadius="3xl" p={4} my={4}>
         <Skeleton isLoaded={!invoicesReq.loading} />
         <Error title="Invoices" description={invoicesReq.error} />
-        <TableContainer>
-          {invoicesReq.data && (
+        {invoicesReq.data && (
+          <TableContainer>
             <Table variant="striped">
               <TableCaption placement="top">Latest invoices</TableCaption>
               <Thead>
@@ -48,7 +48,7 @@ const Dashboard = () => {
                   <Th>Date Issued</Th>
                   <Th>Contact</Th>
                   <Th isNumeric>Amount</Th>
-                  <Th isNumeric>amountDue</Th>
+                  <Th isNumeric>Amount Due</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -62,8 +62,8 @@ const Dashboard = () => {
                 ))}
               </Tbody>
             </Table>
-          )}
-        </TableContainer>
+          </TableContainer>
+        )}
       </Box>
     </>
   );

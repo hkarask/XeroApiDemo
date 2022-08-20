@@ -17,6 +17,8 @@ Sample integration with Xero Api
 ### Client
 
 ![Client](docs/client.png)
+![Client](docs/client-error.png)
+![Client](docs/client-loading.png)
 
 - Basic Chakra + TypeScript UI, powered by Vite
 - `npm run dev` to start the local server, proxies `/api*` requests to backend
