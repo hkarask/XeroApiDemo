@@ -11,15 +11,18 @@ var services = builder.Services;
 services.AddApplication();
 services.AddHttpClient();
 services.AddControllers();
+services.AddRouting(options => options.LowercaseUrls = true);
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo 
     { 
+        Version = "v1",
         Title = "Xero Demo API", 
-        Version = "v1"
+        Description = "Simple Xero integration sample"
     });
-    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "XeroApiDemo.Api.xml"));
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 services.AddSingleton(builder.Configuration.GetSection(XeroOptions.Key).Get<XeroOptions>());
 services.AddDbContext<XeroApiDemoContext>();

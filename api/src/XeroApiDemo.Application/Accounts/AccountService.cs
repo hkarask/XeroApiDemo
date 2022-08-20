@@ -59,7 +59,7 @@ public class AccountService : IAccountService
             AccountId = accountId,
             Amount = x.Total,
             AmountDue = x.AmountDue,
-            ContactName = x.XeroContact?.Name,
+            ContactName = x.Contact.Name,
             DateIssued = x.Date
         }).ToList();
     }

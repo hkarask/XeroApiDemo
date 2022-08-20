@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace XeroApiDemo.Api.Controllers;
 
-[Route("[controller]")]
+[Route("api/[controller]")]
 [ApiController]
+[Produces("application/json")]
 public abstract class ApiController : ControllerBase
 {
     private IMediator _mediator;

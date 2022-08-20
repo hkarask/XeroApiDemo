@@ -2,6 +2,8 @@
 
 public record InvoiceDto : IMapFrom<Invoice>
 {
+    public Guid Id { get; set; }
+    
     public string ContactName { get; init; }
 
     public DateTime DateIssued { get; init; }

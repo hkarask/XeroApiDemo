@@ -6,7 +6,7 @@ public class XeroInvoice
 
     public string Type { get; set; }
         
-    public XeroContact XeroContact { get; set; }
+    public XeroContact Contact { get; set; }
 
     public DateTime Date { get; set; }
 
