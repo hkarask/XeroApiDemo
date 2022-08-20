@@ -2,7 +2,7 @@
 
 public record InvoiceDto : IMapFrom<Invoice>
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; init; }
     
     public string ContactName { get; init; }
 
