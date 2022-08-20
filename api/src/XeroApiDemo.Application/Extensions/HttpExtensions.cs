@@ -17,7 +17,7 @@ public static class HttpExtensions
         return request;
     }
 
-    public static async Task<TResponse> SendAndDeserialize<TResponse>(this HttpClient httpClient,
+    public static async Task<TModel> SendAndDeserialize<TModel>(this HttpClient httpClient,
         HttpRequestMessage request,
         JsonCasing jsonCasing = JsonCasing.Default)
     {
@@ -27,6 +27,6 @@ public static class HttpExtensions
         if (!res.IsSuccessStatusCode)
             throw new IntegrationException($"Request to '{request.RequestUri}' failed ({res.StatusCode}): {content}");
 
-        return content.Deserialize<TResponse>(jsonCasing);
+        return content.Deserialize<TModel>(jsonCasing);
     }
 }
