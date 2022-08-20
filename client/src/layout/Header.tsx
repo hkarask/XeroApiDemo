@@ -8,7 +8,7 @@ import {
 import { IoMenuOutline } from "react-icons/io5";
 import TopMenu from "./TopMenu";
 
-const Header = () => {
+const Header = ({ title }: { title: string }) => {
   const showSidebar = true;
   let bgColor = useColorModeValue(
     "rgba(244, 247, 254, 0.2)",
@@ -16,7 +16,17 @@ const Header = () => {
   );
 
   return (
-    <Flex role="header" bg={bgColor} alignItems="center" pos="sticky" top={0} py={6} px={8} pb={3} backdropFilter="blur(20px)">
+    <Flex
+      role="header"
+      bg={bgColor}
+      alignItems="center"
+      pos="sticky"
+      top={0}
+      py={6}
+      px={8}
+      pb={3}
+      backdropFilter="blur(20px)"
+    >
       <Icon
         display={showSidebar ? "none" : "inherit"}
         role="show-sidebar"
@@ -30,7 +40,7 @@ const Header = () => {
         _hover={{ cursor: "pointer" }}
       />
       <Heading size={["md", "lg"]} color="heading" role="title">
-        Dashboard
+        {title}
       </Heading>
       <Spacer />
       <TopMenu />

@@ -6,7 +6,7 @@ const Brand = () => {
     <Box w="full" marginTop={5} textAlign="center" role="brand">
       <Text fontSize={30} p={6} fontWeight="bold" color="heading">
         <Icon as={BiDizzy} mr={2} top={1} position="relative" />
-        MYAPP
+        XERO DEMO
       </Text>
       <Divider />
     </Box>

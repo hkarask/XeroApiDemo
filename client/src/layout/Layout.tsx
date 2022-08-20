@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-const Layout = ({ view }: { view: React.ReactNode }) => {
+const Layout = ({ title, view }: { title: string; view: React.ReactNode }) => {
   const showSidebar = true;
   const sidebarWidth = "300px";
 
@@ -39,8 +39,8 @@ const Layout = ({ view }: { view: React.ReactNode }) => {
         }}
         transition="all 0.6s"
       >
-        <Header />
-        <Box p={8} pt={0}>
+        <Header title={title} />
+        <Box p={8} pt={0} minH="calc(100vh - 150px)">
           {view}
         </Box>
         <Footer />

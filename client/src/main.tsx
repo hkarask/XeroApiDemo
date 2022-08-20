@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -6,18 +5,20 @@ import theme from "./layout/theme";
 import "./layout/fonts.css";
 import Layout from "./layout/Layout";
 import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
+
+const dashboard = <Layout title="Dashboard" view={<Dashboard />} />;
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ChakraProvider theme={theme}>
-        <Routes>
-          <Route path="/" element={<Layout view={<Dashboard />} />} />
-          <Route path="/reports" element={<Layout view={<Dashboard />} />} />
-          <Route path="/investments" element={<Layout view={<Dashboard />} />} />
-          <Route path="/messages" element={<Layout view={<Dashboard />} />} />
-        </Routes>
-      </ChakraProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <ChakraProvider theme={theme}>
+      <Routes>
+        <Route path="/" element={dashboard} />
+        <Route path="/reports" element={dashboard} />
+        <Route path="/investments" element={dashboard} />
+        <Route path="/messages" element={dashboard} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ChakraProvider>
+  </BrowserRouter>
 );
