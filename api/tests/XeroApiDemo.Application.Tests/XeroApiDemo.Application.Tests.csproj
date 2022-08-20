@@ -22,4 +22,10 @@
       <ProjectReference Include="..\..\src\XeroApiDemo.Application\XeroApiDemo.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Xero\payloads\GET_Invoices.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
