@@ -1,6 +1,6 @@
 namespace XeroApiDemo.Application.Xero.Models;
 
-public class TokenResponse
+public class XeroTokenResponse
 {
     public string AccessToken { get; set; }
 

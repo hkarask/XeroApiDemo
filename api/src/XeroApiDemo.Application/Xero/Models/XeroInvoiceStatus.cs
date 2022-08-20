@@ -1,6 +1,6 @@
 namespace XeroApiDemo.Application.Xero.Models;
 
-public enum InvoiceStatus
+public enum XeroInvoiceStatus
 {
     Unknown,
     Paid,

@@ -1,8 +1,8 @@
-using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace XeroApiDemo.Application.Xero.Models;
 
-public class InvoicesResponse
+public class XeroInvoicesResponse
 {
     public DateTime DateTimeUtc { get; set; }
 
@@ -13,5 +13,8 @@ public class InvoicesResponse
 
     public bool IsSuccessful => Status == "OK";
 
-    public List<Invoice> Invoices { get; set; }
+    public List<XeroInvoice> Invoices { get; set; }
+
+    [JsonIgnore]
+    public string Payload { get; set; }
 }

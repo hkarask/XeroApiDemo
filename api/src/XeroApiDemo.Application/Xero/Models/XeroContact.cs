@@ -1,14 +1,14 @@
 namespace XeroApiDemo.Application.Xero.Models;
 
-public class Invoice
+public class XeroContact
 {
-    public InvoiceStatus Status { get; set; }
+    public string ContactId { get; set; }
 
-    public string Type { get; set; }
-        
-    public Contact Contact { get; set; }
+    public string Name { get; set; }
 
     public DateTime Date { get; set; }
+
+    public string CurrencyCode { get; set; }
 
     public decimal Total { get; set; }
 
